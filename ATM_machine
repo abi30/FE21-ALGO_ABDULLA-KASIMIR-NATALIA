@@ -1,0 +1,162 @@
+
+
+_______________________ATM machine___________________
+
+(A)
+
+int user_amount;
+note_100=0;
+note_50=0;
+note_20=0;
+note_10=0;
+
+
+function_withdrawal(user_amount){
+
+
+
+if(user_amount%10==0){
+    function_100(if(user_amount>=100)){
+    user_amount/100=note_100;
+    user_amount % 100=(remain) ;
+
+}
+function_50(if(remain)>=50 && remain<100){
+
+     user_amount/50=note_50;
+    user_amount % 50=(remain) ;
+}
+function_20(if(remain)>=20 && remain<50){
+
+     user_amount/20=note_20;
+    user_amount % 20=(remain);
+        if (remain==10){
+            note_10=1;
+        }else{
+            note_10=0;
+        }
+
+}
+
+}
+else{
+   Please enter correct amount in the hundreds or tens units as displayed. 
+}
+
+}
+
+
+answer:
+we call function_withdrawal(user_amount){
+
+    withdrawal notes are :note_100;note_50;note_20;note_10;
+}
+
+
+(B)
+don't have 50 note;
+don't have 10 note;
+
+user_amount;// 90,80,70,60,50,40,30,20,10;
+
+
+available_notes = (note_20)
+user_amount = input;
+
+
+if(input%20==0){
+   user_amount/20=note_20;
+}else{
+    Please insert a new amount we have only 20 euro's note;
+
+}
+
+(C)
+
+
+int user_amount;
+
+customer_____________
+note_100=0;
+note_50=0;
+note_20=0;
+note_10=0;
+
+in the machine___________________
+machine_has_note_100=20;
+machine_has_note_50=20;
+machine_has_note_20=40;
+machine_has_note_10=200;
+
+
+
+
+
+
+function_withdrawal(user_amount){
+
+
+
+if(user_amount%10==0){
+
+
+    function_100(if(user_amount>=100)){
+    user_amount/100=note_100;
+    user_amount % 100=(remain) ;
+
+    machine_has_note_100=machine_has_note_100 - note_100;
+    if (machine_has_note_100==0){
+        Please ATM machine should be refilled;
+    }
+
+}
+function_50(if(remain)>=50 && remain<100){
+
+     user_amount/50=note_50;
+    user_amount % 50=(remain) ;
+
+
+    machine_has_note_50=machine_has_note_50-note_50;
+    if (machine_has_note_50==0){
+        Please ATM machine should be refilled;
+    }
+
+}
+function_20(if(remain)>=20 && remain<50){
+
+     user_amount/20=note_20;
+    user_amount % 20=(remain);
+       
+         machine_has_note_20=machine_has_note_20-note_20;
+    if (machine_has_note_20==0){
+        Please ATM machine should be refilled;
+    }
+
+
+
+     if (remain==10){
+          note_10=1;
+       machine_has_note_10=machine_has_note_10-note_10;
+     if (machine_has_note_10==0){
+        Please ATM machine should be refilled;
+    }
+   
+        }else{
+            note_10=0;
+        }
+
+}
+
+}
+else{
+   Please enter correct amount in the hundreds or tens units as displayed. 
+}
+
+}
+
+
+answer:
+we call function_withdrawal(user_amount){
+
+    withdrawal notes are :note_100;note_50;note_20;note_10;
+}
