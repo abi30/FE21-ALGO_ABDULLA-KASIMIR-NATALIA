@@ -1,0 +1,26 @@
+INPUT       
+OUTPUT      
+IF – THEN – ELSE 
+
+WHILE - END WHILE    
+FOR – END FOR     
+REPEAT – UNTIL     
+WHILE / END_WHILE 
+ REPEAT / UNTIL l
+
+ 
+INPUT user's number N 
+INPUT computer's input number X 
+INPUT counter = 0
+
+If user puts guess then the counter counts +1
+If the number of wrong guesses is max. 5 then the game terminates
+
+If the user puts N = X, then the game terminates with success
+
+If the user puts N < X then OUTPUT "your number lower than x"
+  if the number of guesses is less than 5 then continue guessing
+  else terminate the game
+If the user puts N > X then OUTPUT "your number higher than x"
+  if the number of guesses is less than 5 then continue guessing
+  else terminate the game
