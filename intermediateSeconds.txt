@@ -18,25 +18,25 @@ IF USEC >= WEEK then go to Step 1W ELSE
                 
 
     "WeekFunction"
-Step 1W: WSEC = (USEC-WEEK(WW+1)) & WW++ & go to Step 2W
+Step 1W: WSEC = (USEC - WEEK*(WW + 1)) & WW++ & go to Step 2W
 Step 2W: IF WSEC = 0 -> Display WW + "weeks" + DD + "days" + HH + "hours" + MM + "minutes" + "and" + SS +"seconds" & END PROCESS
         IF WSEC > WEEK repeat Step 1W
         IF WSEC < WEEK go to Step 1D
 
     "DayFunction"
-Step 1D: DSEC = (USEC-DAY(DD+1)-WEEK(WW+1)) & DD++ & go to Step 2D
+Step 1D: DSEC = (USEC - DAY*(DD + 1)-WEEK*(WW + 1)) & DD++ & go to Step 2D
 Step 2D: IF DSEC = 0 -> Display WW + "weeks" + DD + "days" + HH + "hours" + MM + "minutes" + "and" + SS +"seconds" & END PROCESS
         IF DSEC > DAY repeat Step 1D
         IF DSEC < DAY go to Step 1H
 
     "HourFunction"
-Step 1H: HSEC = (USEC-HOUR(HH+1)-DAY(DD+1)-WEEK(WW+1)) & WW++ & go to Steep 2H
+Step 1H: HSEC = (USEC - HOUR*(HH + 1) - DAY*(DD + 1) - WEEK*(WW + 1)) & WW++ & go to Steep 2H
 Step 2H: IF HSEC = 0 -> Display WW + "weeks" + DD + "days" + HH + "hours" + MM + "minutes" + "and" + SS +"seconds" & END PROCESS
         IF HSEC > HOUR repeat Step 1H
         IF HSEC < HOUR go to Step 1M
 
     "MinuteFunction"
-Step 1M: MSEC = (USEC-MINUTE(MM+1)-HOUR(HH+1)-DAY(DD+1)-WEEK(WW+1)) & WW++ & go to Steep 2M
+Step 1M: MSEC = (USEC - MINUTE*(MM + 1) - HOUR*(HH + 1) - DAY*(DD + 1) - WEEK*(WW + 1)) & WW++ & go to Steep 2M
 Step 2M: IF MSEC = 0 -> Display WW + "weeks" + DD + "days" + HH + "hours" + MM + "minutes" + "and" + SS +"seconds" & END PROCESS
         IF MSEC > HOUR repeat Step 1M
         IF MSEC < HOUR Display WW + "weeks" + DD + "days" + HH + "hours" + MM + "minutes" + "and" + MSEC +"seconds" & END PROCESS
