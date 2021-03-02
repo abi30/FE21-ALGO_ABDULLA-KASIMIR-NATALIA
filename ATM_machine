@@ -1,0 +1,55 @@
+
+
+_______________________ATM machine___________________
+
+
+
+int user_amount;
+note_100=0;
+note_50=0;
+note_20=0;
+note_10=0;
+
+
+function_withdrawal(user_amount){
+
+
+
+if(user_amount%10==0){
+    function_100(if(user_amount>=100)){
+    user_amount/100=note_100;
+    user_amount % 100=(remain) ;
+
+}
+function_50(if(remain)>=50 && remain<100){
+
+     user_amount/50=note_50;
+    user_amount % 50=(remain) ;
+}
+function_20(if(remain)>=20 && remain<50){
+
+     user_amount/20=note_20;
+    user_amount % 20=(remain);
+        if (remain==10){
+            note_10=1;
+        }else{
+            note_10=0;
+        }
+
+}
+
+}
+else{
+   Please enter correct amount in the hundreds or tens units as displayed. 
+}
+
+}
+
+
+answer:
+we call function_withdrawal(user_amount){
+
+    withdrawal notes are :note_100;note_50;note_20;note_10;
+}
+
+
